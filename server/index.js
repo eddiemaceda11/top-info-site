@@ -24,6 +24,11 @@ app.use((req, res) => {
   res.sendFile("/Users/eddiemaceda/top-info-site/server/404.html");
 });
 
+// Catch-all route
+app.get("*", (req, res) => {
+  res.sendFile("/Users/eddiemaceda/top-info-site/server/404.html");
+});
+
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`App running on PORT ${PORT}`);
